@@ -3,4 +3,6 @@ This is a memo to share what I have learnt in Data Science Project Lifecycle, ca
 
 AI for Industry (AI4I) is a fully online programme to help learners PLUS-skill themselves and learn data science, machine learning, artificial intelligence and visualization in Python. The programme is hosted on the AI Makerspace online platform. DataCamp is used as a resource to support the learning required to complete the programme. The total estimated course learning time is at least 140 hours.
 
+The mission of AI Singapore is to anchor deep national capabilities in Artificial Intelligence, thereby creating social and economic impacts, grow local talent, build an AI ecosystem and put Singapore on the world map.
+
 For more information: https://www.aisingapore.org/talentdevelopment/ai4i/
