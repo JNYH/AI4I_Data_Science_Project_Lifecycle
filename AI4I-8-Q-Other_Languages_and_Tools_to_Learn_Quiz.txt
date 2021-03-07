@@ -1,0 +1,26 @@
+AI4I-8-Q Other Languages and Tools to Learn Quiz
+
+This is a series of quiz questions to test your basic understanding of SQL, Shell and Environments.
+
+1. With SQL, how do you select all the columns from a table named SALES?
+SELECT ALL FROM SALES
+SELECT * FROM SALES <-answer
+SELECT SALES
+SELECT * SALES
+
+
+2. Which SQL keywords specify the sorting direction of the result set retrieved with the ORDER BY clause?
+ASC <-answer
+REVERSE
+SORT
+DESC <-answer
+
+
+3. You are in the shell. We have a file called ‘sample’. We want to highlight only the lines that do not contain the character ‘a’, but the result should be in reverse order. We then want to write the resulting output to a file called ‘myoutput’.
+
+What commands do you issue to shell? (Use Cat, Grep and Sort Commands to help you)
+grep a sample -v | sort -r >> myoutput <-answer
+grep a sample | sort >> myoutput
+grep a sample -v | sort -r | myoutput
+grep a sample | sort -r >> myoutput
+

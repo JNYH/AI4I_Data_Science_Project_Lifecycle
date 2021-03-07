@@ -1,0 +1,21 @@
+AI4I-9-Q Data Science Project Lifecycle Quiz
+
+1. Which metric is not appropriate to measure a classification model?
+RMSE <-answer
+F1
+Accuracy
+Silhouette Score
+
+
+2. Which metrics is appropriate to measure a classification model built with imbalance dataset?
+F1 <-answer
+RMSE
+Accuracy
+Silhouette Score
+
+
+3. Which is not a main principle of SCRUM methodology?
+Frequent sprints to get fast feedbacks from stakeholders
+Defining project goal upfront and not deviating from it. <-answer
+Product owners provide the direction on what product features to build
+

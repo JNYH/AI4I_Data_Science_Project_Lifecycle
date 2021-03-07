@@ -1,0 +1,124 @@
+AI4I-2-Q Libraries and Data Manipulation Quiz
+
+All of the questions in this section refer to this scenario below.
+
+You are working as a Data Scientist in an organization focusing on global health. Your manager has asked you analyze a dataset to study Diabetes for a city in a developing country.
+
+The first dataset you receive was given to you as a text file. When you open the file in a text editor you see the following:
+
+patient_id#Pregnancies#Glucose#BloodPressure#SkinThickness#Insulin#DiabetesPedigreeFunction#Outcome
+163#0#114#80#34#285#0.167#0
+348#3#116#0#0#0#0.187#0
+395#4#158#78#0#0#0.803#1
+187#8#181#68#36#495#0.615#1
+
+
+
+Assume the following library imports:
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+1. Complete the code to read in the data using Pandas such that the DataFrame can be displayed as:
+ 
+ 	Pregnancies	Glucose	BloodPressure	SkinThickness	Insulin	DiabetesPedigreeFunction	Outcome
+patient_id	 	 	 	 	 	 	 
+163	0	114	80	34	285	0.167	0
+348	3	116	0	0	0	0.187	0
+395	4	158	78	0	0	0.803	1
+187	8	181	68	36	495	0.615	1
+342	1	95	74	21	73	0.673	0
+ 
+Complete the following code (2 answers expected)
+df_main = pd.read_csv(filename, 
+sep
+=”#”, 
+index_col
+=0)
+
+
+
+2. Once you have loaded in the data, you proceed to do EDA (Exploratory Data Analysis) to have a better understanding of the data.
+As part of this EDA, you decided to create a box and whiskers plot to look at the Glucose levels of the patients by their diabetic condition.
+Assume that the DataFrame is saved as the variable df. Fill in the blank below to display the plot.
+
+________________________
+plt.xlabel('Diabetic Condition')
+plt.ylabel('Glucose Level')
+plt.show()
+
+(answer>) df.boxplot(column = ['Glucose'], by=['Outcome'])
+plt.boxplot(df, column = ['Glucose'], by=['Outcome'])
+plt.plot(df, column = ['Glucose'], type='boxplot')
+df.boxplot(column = ['Outcome'], by=['Glucose'])
+
+
+
+3. As you continue to explore the data, you then focus your attention on the diastolic Blood Pressure readings. You realise that the raw values are not useful and decide to classify (or bin) the values according to well known Blood Pressure categories.
+Fill in the blank with the the appropriate function to count the number of patients based on their Blood Pressure Status.
+
+bins = [0, 80, 90, 120, 200]
+bin_labels = ['Normal', 'High Blood Pressure 1', 'High Blood Pressure 2', 'Hypertensive']
+bp_status = __________(df_main.BloodPressure, bins=bins).value_counts() 
+bp_status.index = bin_labels
+
+Normal                   568
+High Blood Pressure 1    127
+High Blood Pressure 2     37
+Hypertensive               1
+Name: BloodPressure, dtype: int64
+
+pd.bin
+(answer>) pd.cut
+np.cut
+
+
+
+4. Your manager comes to you and says that some additional features have been made available about the patients. You read in the file into a DataFrame with the variable name df_new_features. The first few values are shown below.
+ 
+ 	BMI	Age
+patient_id	 	 
+30	34.1	38
+430	35.0	43
+259	25.9	24
+103	22.5	21
+525	31.6	24
+ 
+Combine the two DataFrames, taking care to match the information based on the patient_id. You also decide to sort the DataFrame by ascending age and BMI.
+The resultant DataFrame should look like the following:
+ 
+ 	Pregnancies	Glucose	BloodPressure	SkinThickness	Insulin	DiabetesPedigreeFunction	Outcome	BMI	Age
+patient_id	 	 	 	 	 	 	 	 	 
+372	0	118	64	23	89	1.731	0	0.0	21
+146	0	102	75	23	0	0.572	0	0.0	21
+61	2	84	0	0	0	0.304	0	0.0	21
+439	1	97	70	15	0	0.147	0	18.2	21
+527	1	97	64	19	82	0.299	0	18.2	21
+
+Complete the following code (2 answers expected)
+combined = df.
+merge
+(df_new_features, on=’patient_id’).
+sort_values
+(by=[‘Age’,’BMI’])
+
+
+
+5. After a discussion with your manager, you decide to focus the study on patients who are of working age. Filter the dataset to keep only patients aged 65 years (countrys’ official retirement age) or younger. Sort the DataFrame by the patient_id.
+The output DataFrame should look like the following:
+ 
+ 	Pregnancies	Glucose	BloodPressure	SkinThickness	Insulin	DiabetesPedigreeFunction	Outcome	BMI	Age
+patient_id	 	 	 	 	 	 	 	 	 
+372	0	118	64	23	89	1.731	0	0.0	21
+146	0	102	75	23	0	0.572	0	0.0	21
+61	2	84	0	0	0	0.304	0	0.0	21
+439	1	97	70	15	0	0.147	0	18.2	21
+527	1	97	64	19	82	0.299	0	18.2	21
+ 
+Which statement creates this result?
+working_age = combined.Age <= 65
+combined_filtered = combined[working_age]
+combined_filtered = combined[combined['Age'] <= 65].sort_index()
+combined_filtered = combined.loc[combined.Age <= 65].sort_index()
+(answer>) Any of the above
+

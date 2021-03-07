@@ -1,0 +1,31 @@
+AI4I-3-Q Exploratory Data Analysis Quiz
+
+All of the questions in this section refer to the same scenario.
+
+You are a marketing analyst for a candy company. You have been given a dataset of survey data about candy and have been asked to analyze it.
+
+Dataset
+AI4I-3 Exploratory Data Analysis Quiz_DatasetDownload
+
+Imports
+Assume the following imports.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import scipy
+from sklearn.feature_extraction.text import CountVectorizer
+
+When you import the csv, use pd.read_csv('candyhierarchy2017 (1).csv', encoding="ISO-8859-1").
+
+1. How many rows are the in the dataset?
+There are 
+2460
+ rows in the dataset.
+
+2. You have decided to do some analysis around the age of the respondents. After inspecting the data, you notice that there are some missing values. How many missing values does the column ‘Q3: Age’ have in this dataset?
+There are 
+84
+ missing values in the column.
+
+

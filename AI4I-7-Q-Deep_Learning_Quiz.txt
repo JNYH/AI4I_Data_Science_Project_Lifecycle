@@ -1,0 +1,36 @@
+AI4I-7-Q: Deep Learning Quiz
+
+You are trying to build a deep learning classifier that can distinguish between the classes in the MNIST_fashion dataset.
+
+Access the answer key with this link https://colab.research.google.com/drive/1_hGdZRxwlEQzal8fw-2HY-bPa2I9jmg2?usp=sharing
+
+Create a notebook in Google Colaboratory. Install and import Tensorflow 2.0 and the required libraries. Load the MNIST_fashion dataset. What is the width of each picture in pixels?
+
+The width of each picture is 
+28
+ px.
+
+Build a CNN to classifiy the different classes in the dataset. Use what you learnt about convolution layers, activation functions, and dropout.
+
+What activation should you use in the final layer?
+
+softmax
+ should be used in the final activation layer.
+
+What is the next step after the forward pass when you are training a neural network? (Hint: You only need to answer with one word)
+
+The next step is 
+backpropagation
+.
+
+If you have a high training accuracy but a low validation accuracy, what is likely to be happening? (Hint: You only need to answer with one word)
+
+This is 
+overfitting
+.
+
+Fill in the blank.
+
+When using gradient descent, we try to get as close to the 
+global
+ minima as possible (Hint: You only need to answer with one word)
