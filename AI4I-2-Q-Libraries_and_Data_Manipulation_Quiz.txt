@@ -19,6 +19,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 1. Complete the code to read in the data using Pandas such that the DataFrame can be displayed as:
  
  	Pregnancies	Glucose	BloodPressure	SkinThickness	Insulin	DiabetesPedigreeFunction	Outcome
@@ -47,7 +48,7 @@ plt.xlabel('Diabetic Condition')
 plt.ylabel('Glucose Level')
 plt.show()
 
-(answer>) df.boxplot(column = ['Glucose'], by=['Outcome'])
+df.boxplot(column = ['Glucose'], by=['Outcome']) <-answer
 plt.boxplot(df, column = ['Glucose'], by=['Outcome'])
 plt.plot(df, column = ['Glucose'], type='boxplot')
 df.boxplot(column = ['Outcome'], by=['Glucose'])
@@ -69,7 +70,7 @@ Hypertensive               1
 Name: BloodPressure, dtype: int64
 
 pd.bin
-(answer>) pd.cut
+pd.cut <-answer
 np.cut
 
 
@@ -120,5 +121,5 @@ working_age = combined.Age <= 65
 combined_filtered = combined[working_age]
 combined_filtered = combined[combined['Age'] <= 65].sort_index()
 combined_filtered = combined.loc[combined.Age <= 65].sort_index()
-(answer>) Any of the above
+Any of the above <-answer
 

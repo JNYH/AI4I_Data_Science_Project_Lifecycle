@@ -1,32 +1,37 @@
 AI4I-6-Q: Unsupervised Learning Quiz
+
 1. What are the main drawbacks when using dimension reduction techniques on your data?
 Some information is lost, possibly degrading the performance of the subsequent ML algorithms
 Transformed features are hard to interpret
 It can be computationally expensive
 It adds complexity to your ML pipelines
-*All of the above
+All of the above <-answer
+
 
 2. Imagine performing PCA on a 1000 dimension dataset and you set the explained variance to 95%. How many dimensions will the resulting dataset have?
 Either 2 or 3 dimensions
 The dataset cannot be reduced
-*Trick Question! Depends on the dataset
+Trick Question! Depends on the dataset <-answer
+
 
 3. How should you NOT select the optimum number of clusters k in a K-Means Clustering technique?
 a) Plot inertia vs number of clusters and try to identify the ‘elbow joint’
 b) Look at the loss value for each of the k values and select the one with the lowest loss
 c) Plot the silhouette score against the number of cluster. The optimum k value should be near the peak
-*B only
+B only <-answer
+
 
 4. Complete the code snippet below to perform hierarchical clustering on the dataset. Assume that scipy.cluster has been imported for you.
 my_cluster = [Blank](dataset, method='complete')
-*hierarchy.linkage
+hierarchy.linkage <-answer
 linkage
 agglomerative
 hierarchy
 
+
 5. Which statement about Non-negative Matrix Factorization (NMF) is not true?
 It is a dimension reduction technique
 NMF models are easy to interpret
-*NMF can hand handle real numbers as input features
+NMF can hand handle real numbers as input features <-answer
 None of the above
 

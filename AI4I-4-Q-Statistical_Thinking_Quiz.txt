@@ -18,12 +18,14 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 1. One of the first things you want to look at are the Terminated employees (Termd column) and how engaged they are compared to those still under employment. You are curious about the overall data spread (exact data points are not necessary). Which plot would you use to show this?
 
 Bee-swarm plot
-(answer>) Box plot
+Box plot <-answer
 Histogram
 None of these are suitable
+
 
 
 2. You then want to look at what the employees are earning. To do that, you plot the ECDF (Empirical Cumulative Distribution Function) graph for the hourly pay rate. From the chart below, what proportion of the employees are earning $40 or less per hour.
@@ -31,8 +33,9 @@ Is it:
 
 22%
 30%
-(answer>) 70%
+70% <-answer
 I cannot tell from the chart
+
 
 
 3. You want to study if there exists a correlation between the pay rate and the employee engagement. To improve your confidence in the calculation, you decide to apply bootstrapping before calculating the replicate. Complete the function below:
@@ -52,12 +55,12 @@ choice
   return bs_rep
 
 
+
 4. The full dataset has 103 features in total. You decide to try a few dimension reduction techniques. Why do you want to do that?
 
 The data will be less complex.
 The data will require less disk space.
 It will take less computation time to process the data.
 During modeling, there is a lower chance of overfitting.
-(answer>) All of the above
-
+All of the above <-answer
 
