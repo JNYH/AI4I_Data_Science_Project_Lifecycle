@@ -18,6 +18,14 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 When you import the csv, use pd.read_csv('candyhierarchy2017 (1).csv', encoding="ISO-8859-1").
 
+df = pd.read_csv('candyhierarchy2017 (1).csv', encoding="ISO-8859-1")
+df.info()
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2460 entries, 0 to 2459
+Columns: 120 entries, Internal ID to Click Coordinates (x, y)
+dtypes: float64(4), int64(1), object(115)
+memory usage: 2.3+ MB
+
 
 
 1. How many rows are the in the dataset?
@@ -25,6 +33,22 @@ There are
 2460
  rows in the dataset.
 
+
+
+
+print(df.isnull().sum())
+Internal ID                    0
+Q1: GOING OUT?               110
+Q2: GENDER                    41
+Q3: AGE                       84
+Q4: COUNTRY                   64
+                            ... 
+Q12: MEDIA [Daily Dish]     2375
+Q12: MEDIA [Science]        1098
+Q12: MEDIA [ESPN]           2361
+Q12: MEDIA [Yahoo]          2393
+Click Coordinates (x, y)     855
+Length: 120, dtype: int64
 
 
 2. You have decided to do some analysis around the age of the respondents. After inspecting the data, you notice that there are some missing values. How many missing values does the column ‘Q3: Age’ have in this dataset?

@@ -117,8 +117,7 @@ patient_id
 527	1	97	64	19	82	0.299	0	18.2	21
  
 Which statement creates this result?
-working_age = combined.Age <= 65
-combined_filtered = combined[working_age]
+working_age = combined.Age <= 65; combined_filtered = combined[working_age]
 combined_filtered = combined[combined['Age'] <= 65].sort_index()
 combined_filtered = combined.loc[combined.Age <= 65].sort_index()
 Any of the above <-answer
